@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Mortal Hearts",
-    "currentPage": "testA.html",
+    "currentPage": "index.html",
     "theme": {
       "name": "startm5",
       "title": "StartM5",
@@ -14687,11 +14687,11 @@
         }
       ]
     },
-    "testA.html": {
+    "page16.html": {
       "settings": {
         "title": "QNS_PIANO COIN A",
         "order": "4",
-        "meta_descr": "Infinite Exhale portfolio piece",
+        "meta_descr": "Piano Test A",
         "socialSharingUrl": ""
       },
       "components": [
