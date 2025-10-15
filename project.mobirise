@@ -15556,7 +15556,7 @@
             },
             ".mbr-text": {
               "color": "#7f7c7c",
-              "text-align": "left"
+              "text-align": "center"
             },
             "@keyframes spin": {
               "from": {
@@ -15798,7 +15798,7 @@
               "display": "none"
             },
             ".mbr-section-subtitle": {
-              "text-align": "left",
+              "text-align": "center",
               "color": "#000000"
             }
           },
