@@ -1,7 +1,7 @@
 {
   "settings": {
     "name": "Mortal Hearts",
-    "currentPage": "page100.html",
+    "currentPage": "page11.html",
     "theme": {
       "name": "startm5",
       "title": "StartM5",
@@ -14717,7 +14717,7 @@
         }
       ]
     },
-    "page16.html": {
+    "page17.html": {
       "settings": {
         "title": "QNS_PIANO COIN A",
         "order": "4",
