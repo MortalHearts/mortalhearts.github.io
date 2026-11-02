@@ -1,0 +1,1226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Audio Message (Low Confidence) Poems</title>
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e9e9;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  color: #171717;
+}
+
+.phone {
+  width: 375px;
+  height: 760px;
+  max-height: 94vh;
+  background: #fff;
+  border: 10px solid #171717;
+  border-radius: 46px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 18px 50px rgba(0,0,0,.18);
+  display: flex;
+  flex-direction: column;
+}
+
+.status-bar {
+  height: 48px;
+  padding: 13px 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.dynamic-island {
+  position: absolute;
+  width: 105px;
+  height: 28px;
+  background: #111;
+  border-radius: 20px;
+  top: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.status-icons { letter-spacing: 2px; }
+
+.screen {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 22px 30px;
+}
+
+h1 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 8px 0 5px;
+}
+
+.subtitle {
+  color: #888;
+  font-size: 13px;
+  margin-bottom: 26px;
+}
+
+.voicemail-list { border-top: 1px solid #ededed; }
+
+.voicemail {
+  display: flex;
+  align-items: center;
+  min-height: 76px;
+  border-bottom: 1px solid #ededed;
+  cursor: pointer;
+  gap: 13px;
+  padding: 12px 0;
+}
+
+.voicemail:active { background: #f8f8f8; }
+
+.unread-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #1685e8;
+  flex-shrink: 0;
+}
+
+.unread-dot.read { background: transparent; }
+
+.initials {
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #eeeeef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #555;
+  flex-shrink: 0;
+}
+
+.voicemail-info { flex: 1; min-width: 0; }
+
+.voicemail-name {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.voicemail-date {
+  color: #888;
+  font-size: 12px;
+}
+
+.chevron {
+  color: #c4c4c4;
+  font-size: 22px;
+  padding-left: 5px;
+}
+
+.reader-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 3px 0 27px;
+}
+
+.back-button {
+  border: 0;
+  background: none;
+  color: #1685e8;
+  font-size: 16px;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.reader-date { color: #888; font-size: 12px; }
+
+.caller-name {
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: -.4px;
+  margin-bottom: 5px;
+}
+
+.transcription-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #999;
+  margin: 25px 0 18px;
+}
+
+.poem {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  line-height: 1.55;
+  color: #222;
+  white-space: pre-wrap;
+}
+
+.stanza { margin-bottom: 1.25em; }
+
+.poem-line { min-height: 1.55em; }
+
+.cursor {
+  display: inline-block;
+  width: 1px;
+  height: 17px;
+  background: #1685e8;
+  margin-left: 2px;
+  vertical-align: -2px;
+  animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+  to { visibility: hidden; }
+}
+
+.finished-message {
+  margin-top: 27px;
+  opacity: 0;
+  transition: opacity .7s ease;
+}
+
+.finished-message.visible { opacity: 1; }
+
+.return-button {
+  border: 0;
+  background: none;
+  color: #1685e8;
+  font-size: 15px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* About page */
+
+.about-title {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: normal;
+  letter-spacing: -.5px;
+  margin: 5px 0 12px;
+}
+
+.about-credit {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  font-style: italic;
+  color: #777;
+  margin-bottom: 32px;
+}
+
+.about-copy {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.65;
+  color: #333;
+}
+
+.home-indicator {
+  width: 115px;
+  height: 4px;
+  border-radius: 5px;
+  background: #111;
+  margin: 9px auto 8px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 420px) {
+  body { background: #fff; }
+
+  .phone {
+    width: 100%;
+    height: 100dvh;
+    max-height: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .dynamic-island { top: 12px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+  <div class="status-bar">
+    <span>9:41</span>
+    <div class="dynamic-island"></div>
+    <span class="status-icons">● ◔ ▰</span>
+  </div>
+
+  <main class="screen" id="screen">
+
+    <section id="inbox">
+      <h1>Voicemail</h1>
+      <div class="subtitle">Transcribed messages</div>
+      <div class="voicemail-list" id="voicemailList"></div>
+    </section>
+
+    <section id="reader" hidden>
+      <div class="reader-header">
+        <button class="back-button" id="backButton">‹ Voicemail</button>
+        <span class="reader-date" id="readerDate"></span>
+      </div>
+
+      <div id="poemView">
+        <div class="caller-name" id="callerName"></div>
+        <div class="transcription-label">TRANSCRIPTION</div>
+        <div class="poem" id="poem"></div>
+      </div>
+
+      <div id="aboutView" hidden>
+        <div class="about-title">Audio Message (Low Confidence) Poems</div>
+        <div class="about-credit">Collected and arranged by Daniel Giachetti</div>
+        <div class="about-copy">
+          <p>The following poems are comprised of bad voicemail transcriptions, often denoted on the iPhone as (Low Confidence). In some cases large gaps, common greetings/salutations, “ums,” and complete nonsense were edited out. Line breaks are mine.</p>
+        </div>
+      </div>
+
+      <div class="finished-message" id="finishedMessage">
+        <button class="return-button" id="returnButton">
+          Return to voicemail
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="home-indicator"></div>
+</div>
+
+<script>
+const messages = [
+  {
+    name: "A.H.C. to J.A.L.",
+    initials: "A.H.",
+    date: "7/18/25",
+    fullDate: "July 18, 2025",
+    stanzas: [
+      [
+        "Hello, my name is Michelle",
+        "and I'm calling",
+        "from complex care solutions"
+      ],
+      [
+        "on a recorded line for quality",
+        "and training purposes"
+      ],
+      ["may speak with Julia Lazel"],
+      ["Can we speak with Julia Lazo?"],
+      [
+        "I do apologize",
+        "if you're able to hear me",
+        "I'm unable to hear you."
+      ],
+      ["This message is for Julia Lienzo."],
+      [
+        "My name is Michelle",
+        "and I'm calling",
+        "from complex care solutions"
+      ]
+    ]
+  },
+
+  {
+    name: "Wrong number to J.L.",
+    initials: "J.L.",
+    date: "3/23/23",
+    fullDate: "March 23, 2023",
+    stanzas: [
+      [
+        "Siri",
+        "I don't know what happened",
+        "all I know is",
+        "it says I",
+        "at the total"
+      ],
+      [
+        "is that",
+        "this is fun"
+      ],
+      [
+        "165511865 at the tone",
+        "please leave your message"
+      ],
+      [
+        "that's all what happened",
+        "yeah yeah yeah"
+      ],
+      [
+        "God I don't know",
+        "I don't know she's",
+        "she's crazy"
+      ],
+      [
+        "what can I tell you",
+        "she's not all there"
+      ],
+      [
+        "OK OK what can I tell you",
+        "I don't even wanna go home"
+      ],
+      [
+        "I don't know what I really",
+        "I have no idea",
+        "what's going on"
+      ],
+      [
+        "but I was gonna say",
+        "I'm sure"
+      ]
+    ]
+  },
+
+  {
+    name: "C.M. to D.G.",
+    initials: "C.M.",
+    date: "5/20/25",
+    fullDate: "May 20, 2025",
+    stanzas: [
+      [
+        "I mean, I was so sure",
+        "I had such a good feeling",
+        "that this is going to be"
+      ],
+      [
+        "well, I mean",
+        "not that we should give up",
+        "on calling each other",
+        "of course, but maybe",
+        "this is how we have conversations now"
+      ],
+      [
+        "so like",
+        "you doing me",
+        "I know, I'm just getting some laundry done",
+        "about to do some painting",
+        "audiobook",
+        "listen to the house, to myself, for a little while"
+      ],
+      [
+        "so I did, I did",
+        "I had watermelon before me",
+        "a third of a watermelon actually because",
+        "I'll eat your normal season",
+        "you knew that about me",
+        "but I am"
+      ],
+      [
+        "I didn't water",
+        "the past few days",
+        "I don't think",
+        "it's bad"
+      ],
+      [
+        "well, anyway",
+        "I love you"
+      ],
+      ["let her look"]
+    ]
+  },
+
+  {
+    name: "R.L. to J.A.L.",
+    initials: "R.L.",
+    date: "6/27/24",
+    fullDate: "June 27, 2024",
+    stanzas: [
+      ["Hi Juliet"],
+      [
+        "the game",
+        "just wanted to say hi"
+      ],
+      ["let her say hi"],
+      [
+        "on the message",
+        "I am a message"
+      ],
+      ["hi"],
+      ["OK hope you're having fun"],
+      ["some rest"]
+    ]
+  },
+
+  {
+    name: "C.M. to D.G.",
+    initials: "C.M.",
+    date: "10/30/25",
+    fullDate: "October 30, 2025",
+    stanzas: [
+      [
+        "I'm sorry I didn't answer",
+        "your call earlier"
+      ],
+      [
+        "I was going to be",
+        "electrician"
+      ],
+      [
+        "all day",
+        "at my house"
+      ],
+      [
+        "We are in an Uber",
+        "on my way back to N_____"
+      ],
+      [
+        "one AirPod in my right",
+        "left AirPod",
+        "we listen",
+        "I listen",
+        "to your voicemail"
+      ],
+      [
+        "kids, so we",
+        "listen",
+        "to your voicemail"
+      ]
+    ]
+  },
+
+  {
+    name: "G.O. to P.O.",
+    initials: "G.O.",
+    date: "9/13/23",
+    fullDate: "September 13, 2023",
+    stanzas: [
+      [
+        "I just wanted to tell you",
+        "a funny thing"
+      ],
+      [
+        "you're just",
+        "just cookie",
+        "as I am"
+      ],
+      [
+        "And when I just took my ears off",
+        "last night",
+        "went to bed",
+        "I had one gold one and one silver"
+      ],
+      [
+        "two different earrings",
+        "and you never told me"
+      ],
+      [
+        "All right,",
+        "I think you just been me"
+      ]
+    ]
+  },
+
+  {
+    name: "W.E. to N.T.",
+    initials: "W.E.",
+    date: "10/31/22",
+    fullDate: "October 31, 2022",
+    stanzas: [
+      [
+        "morning is West",
+        "about 930 on Monday, October 1"
+      ],
+      [
+        "am getting a night",
+        "to possibly come by",
+        "tomorrow",
+        "a kind of short notice"
+      ],
+      [
+        "I work on that stuff",
+        "for you",
+        "a shout works for me",
+        "or text",
+        "or give me a call",
+        "actually"
+      ],
+      [
+        "I wanted",
+        "to be good",
+        "to talk to you",
+        "about this",
+        "little bit first"
+      ],
+      [
+        "so um yeah",
+        "just give me a shout back",
+        "when you can"
+      ],
+      [
+        "I got a appointment right now",
+        "so I wouldn't be on the phone",
+        "for another hour"
+      ],
+      [
+        "but to",
+        "give me a call"
+      ]
+    ]
+  },
+
+  {
+    name: "N.M. (Wrong Number) to D.G.",
+    initials: "N.M.",
+    date: "8/23/24",
+    fullDate: "August 23, 2024",
+    stanzas: [
+      [
+        "we",
+        "I like",
+        "Temper"
+      ],
+      [
+        "October,",
+        "the last week in September",
+        "first week of October"
+      ],
+      [
+        "tell me",
+        "it will be like 85°",
+        "five nights",
+        "early in the night my"
+      ],
+      [
+        "What are you guys doing",
+        "for Labor Day",
+        "Text me about it",
+        "Because I want"
+      ],
+      [
+        "There's a chance we might want",
+        "Go hey",
+        "I will",
+        "I can",
+        "for a little"
+      ],
+      ["Convenient"]
+    ]
+  },
+
+  {
+    name: "G. to C.C.",
+    initials: "G.",
+    date: "3/22/25",
+    fullDate: "March 22, 2025",
+    stanzas: [
+      [
+        "Christian couple",
+        "is at the Saturday"
+      ],
+      [
+        "I was wondering",
+        "what you",
+        "doing later on",
+        "For dinner"
+      ],
+      [
+        "I'm planning to go by Nina",
+        "Probably for",
+        "like dinner"
+      ],
+      [
+        "and I call her Karen",
+        "and she said busy",
+        "with a boyfriend"
+      ],
+      [
+        "so I was wondering",
+        "if you're available"
+      ],
+      [
+        "I am free man",
+        "for dinner"
+      ],
+      [
+        "so let me know",
+        "if you're available",
+        "ciao"
+      ]
+    ]
+  },
+
+  {
+    name: "Spam (Fort Wayne, Indiana) to J.L.",
+    initials: "SPAM",
+    date: "1/28/25",
+    fullDate: "January 28, 2025",
+    stanzas: [
+      [
+        "Loud, Found one",
+        "I wanna meet"
+      ],
+      [
+        "Well, for you",
+        "if you have any questions",
+        "Help 247"
+      ],
+      ["Have a good one"]
+    ]
+  },
+
+  {
+    name: "G.O. to P.O.",
+    initials: "G.O.",
+    date: "2/13/21",
+    fullDate: "February 13, 2021",
+    stanzas: [
+      [
+        "I just wanted to tell you",
+        "the best news ever",
+        "and I forgot to call",
+        "you about it"
+      ],
+      [
+        "but I don't know what I mean",
+        "how I get",
+        "but I"
+      ],
+      [
+        "I really want",
+        "to FaceTime you",
+        "or call you",
+        "whenever"
+      ],
+      [
+        "it's nice to you",
+        "I just read it",
+        "really"
+      ],
+      [
+        "really wanted to tell you this",
+        "it's great",
+        "back when",
+        "ever I know"
+      ],
+      [
+        "I just",
+        "really got",
+        "to think",
+        "you could hear it"
+      ],
+      ["I love you Siri mommy"]
+    ]
+  },
+
+  {
+    name: "T.R. to D.G.",
+    initials: "T.R.",
+    date: "10/5/25",
+    fullDate: "October 5, 2025",
+    stanzas: [
+      [
+        "going to a shoot",
+        "see what was going down",
+        "I didn't forget",
+        "about that request you made",
+        "by saying I didn't forget",
+        "about"
+      ],
+      [
+        "I mean,",
+        "I did forget about it",
+        "and I remembered",
+        "I was like,",
+        "oh what you need",
+        "so I'll try to send you that"
+      ],
+      [
+        "I like all the stuff",
+        "music",
+        "I got 30",
+        "just need a list",
+        "or is it too late?"
+      ],
+      [
+        "go over",
+        "and I feel bad",
+        "you do it now"
+      ],
+      [
+        "whatever, but then you hang up",
+        "Give me a call",
+        "I can't wait",
+        "for the little dancing very"
+      ]
+    ]
+  },
+
+  {
+    name: "E.A. to J.L. (in three parts)",
+    initials: "E.A.",
+    date: "4/30/22",
+    fullDate: "April 30, 2022",
+    stanzas: [
+      [
+        "PART 1",
+        "",
+        "well guys",
+        "I wanted to say hi and",
+        "I haven't seen you in months by the way",
+        "and we went to Mexico in December",
+        "and we'd like to like legal tiny souvenirs",
+        "that we haven't been able to give them to you personally"
+      ],
+      [
+        "I already gave your mom and your father the things",
+        "but well that's not the point",
+        "the point is"
+      ],
+      [
+        "that today",
+        "and I went to pressure wash your parents’ house",
+        "and then I have a privilege",
+        "to see them at night"
+      ],
+      [
+        "and I love them with all my heart",
+        "and I just want to talk to you",
+        "and let you know how this is going to work"
+      ],
+      [
+        "I want your mom to enjoy your house",
+        "if 40",
+        "painted",
+        "and the beautiful"
+      ],
+      [
+        "PART II",
+        "",
+        "I'm over the stuff you know",
+        "I gave him a price of seven",
+        "the 500 you know"
+      ],
+      [
+        "I don't care",
+        "I told him that bees",
+        "bees house",
+        "if I would like dying"
+      ],
+      [
+        "we need to have a printer always",
+        "60° you know that",
+        "the blue deep…"
+      ],
+      [
+        "Second one",
+        "whatever but",
+        "and they understood I"
+      ],
+      [
+        "and I saw her baby excite",
+        "and I broke",
+        "my god can you",
+        "the news",
+        "what is going on"
+      ],
+      [
+        "and we are closer",
+        "well happy",
+        "I know you're Jewish",
+        "I'm Catholic",
+        "and I want to send you a picture",
+        "of my beautiful"
+      ],
+      [
+        "I was what I am",
+        "where",
+        "well just leave my booty"
+      ],
+      [
+        "PART III",
+        "",
+        "Mary it's Judy's",
+        "ha ha Ha",
+        "she said to make only miracles happen",
+        "in my life",
+        "as well"
+      ],
+      [
+        "this mess up",
+        "my funny comment"
+      ],
+      [
+        "well just so you know",
+        "I love you guys unique",
+        "and I will take it",
+        "I want to take care of your mom",
+        "and I will put on old like that for them"
+      ],
+      [
+        "on my love",
+        "in order to make this happen",
+        "for them",
+        "and I wasn't her"
+      ],
+      [
+        "enjoy her house all day",
+        "only way",
+        "she she she has been reading with",
+        "and I know I can do it"
+      ],
+      [
+        "OK don't worry if you think",
+        "the best kind of nobodies gonna think you care of them",
+        "I was like I saw you really care OK",
+        "well I might"
+      ]
+    ]
+  },
+
+  {
+    name: "Wrong number (Encinitas CA) to J.L.",
+    initials: "J.L.",
+    date: "3/23/23",
+    fullDate: "March 23, 2023",
+    stanzas: [
+      [
+        "Siri",
+        "I don't know what happened"
+      ],
+      [
+        "all I know is",
+        "it says",
+        "I at the total",
+        "play",
+        "is that this is fun",
+        "165511865 at the tone",
+        "please leave your message"
+      ],
+      ["that's all what happened yeah yeah yeah…"],
+      [
+        "Well as well",
+        "OK bye"
+      ],
+      [
+        "God",
+        "I don't know",
+        "I don't know she's",
+        "she's crazy",
+        "what can I tell you",
+        "she's not all there"
+      ],
+      [
+        "OK OK what can I tell you",
+        "I don't even wanna go home"
+      ],
+      [
+        "I don't know what I really",
+        "I have no idea what's going on",
+        "but I was gonna say I'm sure"
+      ]
+    ]
+  },
+
+  {
+    name: "C.M. to D.G.",
+    initials: "C.M.",
+    date: "5/16/25",
+    fullDate: "May 16, 2025",
+    stanzas: [
+      ["Hello"],
+      [
+        "this is a fun little game",
+        "we don't ever need to use them"
+      ],
+      ["hang out for the rest of our life"]
+    ]
+  },
+
+  {
+    name: "PS122 to J.A.L.",
+    initials: "PS",
+    date: "12/8/25",
+    fullDate: "December 8, 2025",
+    stanzas: [
+      [
+        "Good morning this is Lori the greenhouse",
+        "from pH 13 to 2"
+      ],
+      [
+        "trying to fix the parents of",
+        "the change"
+      ],
+      [
+        "she came to the medical room",
+        "complaining of business"
+      ],
+      [
+        "and that she feels"
+      ],
+      [
+        "warm but I'm assessment",
+        "she doesn't have",
+        "no fever"
+      ],
+      [
+        "and all right science normal",
+        "so courage",
+        "how to drink some water"
+      ],
+      [
+        "I'm gonna",
+        "send a box of supplies",
+        "and I'm not surprised",
+        "and see how she feels if she",
+        "doesn't feel well she will come back",
+        "to the medical room",
+        "and I'll contact you"
+      ]
+    ]
+  },
+
+  {
+    name: "J.B. to J.L.",
+    initials: "J.B.",
+    date: "4/5/26",
+    fullDate: "April 5, 2026",
+    stanzas: [
+      [
+        "Hey Julian, happy, sir.",
+        "Happy to Jim yeojap",
+        "hope he's having a good one."
+      ],
+      [
+        "You guys is hope doing good.",
+        "I guess maybe we're at a family gathering today",
+        "I don't know but so like I said, happy Easter,",
+        "I'm doing good, I guess."
+      ],
+      [
+        "And go.",
+        "Just haven't heard from you guys in a long time.",
+        "So I just wanted to spaces,",
+        "are we still down in Tennessee?"
+      ],
+      [
+        "I'm excuse me,",
+        "Texas nursing director."
+      ],
+      [
+        "So",
+        "Everything's good up here."
+      ],
+      [
+        "But with, you know,",
+        "with the rest of the family",
+        "So be good,",
+        "love,",
+        "you guys."
+      ]
+    ]
+  },
+
+  {
+    name: "About",
+    initials: "i",
+    date: "ABOUT",
+    type: "about"
+  }
+];
+
+const inbox = document.getElementById("inbox");
+const reader = document.getElementById("reader");
+const voicemailList = document.getElementById("voicemailList");
+const callerName = document.getElementById("callerName");
+const readerDate = document.getElementById("readerDate");
+const poem = document.getElementById("poem");
+const finishedMessage = document.getElementById("finishedMessage");
+const poemView = document.getElementById("poemView");
+const aboutView = document.getElementById("aboutView");
+const screen = document.getElementById("screen");
+
+let typingTimers = [];
+let readMessages = new Set();
+
+function buildInbox() {
+  voicemailList.innerHTML = "";
+
+  messages.forEach((message, index) => {
+    const item = document.createElement("div");
+    item.className = "voicemail";
+
+    const dot = document.createElement("div");
+    dot.className = "unread-dot" +
+      (readMessages.has(index) ? " read" : "");
+
+    const initials = document.createElement("div");
+    initials.className = "initials";
+    initials.textContent = message.initials;
+
+    const info = document.createElement("div");
+    info.className = "voicemail-info";
+
+    const name = document.createElement("div");
+    name.className = "voicemail-name";
+    name.textContent = message.name;
+
+    const date = document.createElement("div");
+    date.className = "voicemail-date";
+    date.textContent = message.date;
+
+    info.appendChild(name);
+    info.appendChild(date);
+
+    const chevron = document.createElement("div");
+    chevron.className = "chevron";
+    chevron.textContent = "›";
+
+    item.appendChild(dot);
+    item.appendChild(initials);
+    item.appendChild(info);
+    item.appendChild(chevron);
+
+    item.addEventListener("click", () => openMessage(index));
+    voicemailList.appendChild(item);
+  });
+}
+
+function clearTypingTimers() {
+  typingTimers.forEach(timer => clearTimeout(timer));
+  typingTimers = [];
+}
+
+function getTypingDelay() {
+  const variation = 650 + Math.random() * 550;
+
+  if (Math.random() < 0.16) {
+    return variation + 700 + Math.random() * 600;
+  }
+
+  return variation;
+}
+
+function openMessage(index) {
+  clearTypingTimers();
+
+  readMessages.add(index);
+  buildInbox();
+
+  const message = messages[index];
+
+  inbox.hidden = true;
+  reader.hidden = false;
+  screen.scrollTop = 0;
+
+  readerDate.textContent = message.fullDate || "";
+
+  finishedMessage.classList.remove("visible");
+  poem.innerHTML = "";
+
+  if (message.type === "about") {
+    poemView.hidden = true;
+    aboutView.hidden = false;
+    finishedMessage.classList.add("visible");
+    return;
+  }
+
+  aboutView.hidden = true;
+  poemView.hidden = false;
+
+  callerName.textContent = message.name;
+  typePoem(message.stanzas);
+}
+
+function typePoem(stanzas) {
+  let stanzaIndex = 0;
+  let lineIndex = 0;
+
+  const cursor = document.createElement("span");
+  cursor.className = "cursor";
+
+  function showNextLine() {
+    if (stanzaIndex >= stanzas.length) {
+      cursor.remove();
+
+      const finishTimer = setTimeout(() => {
+        finishedMessage.classList.add("visible");
+      }, 650);
+
+      typingTimers.push(finishTimer);
+      return;
+    }
+
+    const stanza = stanzas[stanzaIndex];
+
+    if (lineIndex === 0) {
+      const stanzaElement = document.createElement("div");
+      stanzaElement.className = "stanza";
+      poem.appendChild(stanzaElement);
+      poem.currentStanza = stanzaElement;
+    }
+
+    const line = document.createElement("div");
+    line.className = "poem-line";
+
+    // An empty string creates an empty line within a section.
+    line.textContent = stanza[lineIndex];
+
+    poem.currentStanza.appendChild(line);
+
+    if (stanza[lineIndex] !== "") {
+      line.appendChild(cursor);
+    } else {
+      line.appendChild(cursor);
+    }
+
+    lineIndex++;
+
+    if (lineIndex >= stanza.length) {
+      stanzaIndex++;
+      lineIndex = 0;
+    }
+
+    const timer = setTimeout(showNextLine, getTypingDelay());
+    typingTimers.push(timer);
+
+    screen.scrollTop = screen.scrollHeight;
+  }
+
+  showNextLine();
+}
+
+function returnToInbox() {
+  clearTypingTimers();
+
+  reader.hidden = true;
+  inbox.hidden = false;
+
+  buildInbox();
+  screen.scrollTop = 0;
+}
+
+document.getElementById("backButton")
+  .addEventListener("click", returnToInbox);
+
+document.getElementById("returnButton")
+  .addEventListener("click", returnToInbox);
+
+buildInbox();
+</script>
+
+</body>
+</html>
