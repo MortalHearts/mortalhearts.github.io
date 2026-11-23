@@ -1,0 +1,618 @@
+[
+  {
+    "key": 1,
+    "title": "Kosciuszko Bridge",
+    "audio": "assets/audio/01.mp3",
+    "image": "assets/images/01.jpg",
+    "altAudio": "assets/audio-alt/01.mp3"
+  },
+  {
+    "key": 2,
+    "title": "Spider-Man",
+    "audio": "assets/audio/02.mp3",
+    "image": "assets/images/02.jpg",
+    "altAudio": "assets/audio-alt/02.mp3"
+  },
+  {
+    "key": 3,
+    "title": "Glo Laundry",
+    "audio": "assets/audio/03.mp3",
+    "image": "assets/images/03.jpg",
+    "altAudio": "assets/audio-alt/03.mp3"
+  },
+  {
+    "key": 4,
+    "title": "Piano at Sunnyside Book Swap",
+    "audio": "assets/audio/04.mp3",
+    "image": "assets/images/04.jpg",
+    "altAudio": "assets/audio-alt/04.mp3"
+  },
+  {
+    "key": 5,
+    "title": "Socrates Dog Costume Contest",
+    "audio": "assets/audio/05.mp3",
+    "image": "assets/images/05.jpg",
+    "altAudio": "assets/audio-alt/05.mp3"
+  },
+  {
+    "key": 6,
+    "title": "Astoria Park Fireworks",
+    "audio": "assets/audio/06.mp3",
+    "image": "assets/images/06.jpg",
+    "altAudio": "assets/audio-alt/06.mp3"
+  },
+  {
+    "key": 7,
+    "title": "Train Over Hell Gate Bridge",
+    "audio": "assets/audio/07.mp3",
+    "image": "assets/images/07.jpg",
+    "altAudio": "assets/audio-alt/07.mp3"
+  },
+  {
+    "key": 8,
+    "title": "St. Matthias Church",
+    "audio": "assets/audio/08.mp3",
+    "image": "assets/images/08.jpg",
+    "altAudio": "assets/audio-alt/08.mp3"
+  },
+  {
+    "key": 9,
+    "title": "Low-Flying Planes",
+    "audio": "assets/audio/09.mp3",
+    "image": "assets/images/09.jpg",
+    "altAudio": "assets/audio-alt/09.mp3"
+  },
+  {
+    "key": 10,
+    "title": "Skatepark",
+    "audio": "assets/audio/10.mp3",
+    "image": "assets/images/10.jpg",
+    "altAudio": "assets/audio-alt/10.mp3"
+  },
+  {
+    "key": 11,
+    "title": "Locals Surf Lessons",
+    "audio": "assets/audio/11.mp3",
+    "image": "assets/images/11.jpg",
+    "altAudio": "assets/audio-alt/11.mp3"
+  },
+  {
+    "key": 12,
+    "title": "Topos Bookstore Café",
+    "audio": "assets/audio/12.mp3",
+    "image": "assets/images/12.jpg",
+    "altAudio": "assets/audio-alt/12.mp3"
+  },
+  {
+    "key": 13,
+    "title": "Gotham Pickleball",
+    "audio": "assets/audio/13.mp3",
+    "image": "assets/images/13.jpg",
+    "altAudio": "assets/audio-alt/13.mp3"
+  },
+  {
+    "key": 14,
+    "title": "Long Island City Construction",
+    "audio": "assets/audio/14.mp3",
+    "image": "assets/images/14.jpg",
+    "altAudio": "assets/audio-alt/14.mp3"
+  },
+  {
+    "key": 15,
+    "title": "Jackson Heights Pride Parade",
+    "audio": "assets/audio/15.mp3",
+    "image": "assets/images/15.jpg",
+    "altAudio": "assets/audio-alt/15.mp3"
+  },
+  {
+    "key": 16,
+    "title": "Food Vendor/NYPD Generators",
+    "audio": "assets/audio/16.mp3",
+    "image": "assets/images/16.jpg",
+    "altAudio": "assets/audio-alt/16.mp3"
+  },
+  {
+    "key": 17,
+    "title": "East River Jet Ski",
+    "audio": "assets/audio/17.mp3",
+    "image": "assets/images/17.jpg",
+    "altAudio": "assets/audio-alt/17.mp3"
+  },
+  {
+    "key": 18,
+    "title": "Every Stop on the 7 Train",
+    "audio": "assets/audio/18.mp3",
+    "image": "assets/images/18.jpg",
+    "altAudio": "assets/audio-alt/18.mp3"
+  },
+  {
+    "key": 19,
+    "title": "Easter Procession",
+    "audio": "assets/audio/19.mp3",
+    "image": "assets/images/19.jpg",
+    "altAudio": "assets/audio-alt/19.mp3"
+  },
+  {
+    "key": 20,
+    "title": "Epitaphios",
+    "audio": "assets/audio/20.mp3",
+    "image": "assets/images/20.jpg",
+    "altAudio": "assets/audio-alt/20.mp3"
+  },
+  {
+    "key": 21,
+    "title": "St. George’s Pipe Organ",
+    "audio": "assets/audio/21.mp3",
+    "image": "assets/images/21.jpg",
+    "altAudio": "assets/audio-alt/21.mp3"
+  },
+  {
+    "key": 22,
+    "title": "Qahwah House",
+    "audio": "assets/audio/22.mp3",
+    "image": "assets/images/22.jpg",
+    "altAudio": "assets/audio-alt/22.mp3"
+  },
+  {
+    "key": 23,
+    "title": "Ecuadorian Spring Recital",
+    "audio": "assets/audio/23.mp3",
+    "image": "assets/images/23.jpg",
+    "altAudio": "assets/audio-alt/23.mp3"
+  },
+  {
+    "key": 24,
+    "title": "Jmart",
+    "audio": "assets/audio/24.mp3",
+    "image": "assets/images/24.jpg",
+    "altAudio": "assets/audio-alt/24.mp3"
+  },
+  {
+    "key": 25,
+    "title": "Hindu Temple Society",
+    "audio": "assets/audio/25.mp3",
+    "image": "assets/images/25.jpg",
+    "altAudio": "assets/audio-alt/25.mp3"
+  },
+  {
+    "key": 26,
+    "title": "Music from Queens",
+    "audio": "assets/audio/26.mp3",
+    "image": "assets/images/26.jpg",
+    "altAudio": "assets/audio-alt/26.mp3"
+  },
+  {
+    "key": 27,
+    "title": "Film/TV Name Drops",
+    "audio": "assets/audio/27.mp3",
+    "image": "assets/images/27.jpg",
+    "altAudio": "assets/audio-alt/27.mp3"
+  },
+  {
+    "key": 28,
+    "title": "Springfield Gardens Mobile Preacher",
+    "audio": "assets/audio/28.mp3",
+    "image": "assets/images/28.jpg",
+    "altAudio": "assets/audio-alt/28.mp3"
+  },
+  {
+    "key": 29,
+    "title": "Soccer",
+    "audio": "assets/audio/29.mp3",
+    "image": "assets/images/29.jpg",
+    "altAudio": "assets/audio-alt/29.mp3"
+  },
+  {
+    "key": 30,
+    "title": "Dragon Boat Festival",
+    "audio": "assets/audio/30.mp3",
+    "image": "assets/images/30.jpg",
+    "altAudio": "assets/audio-alt/30.mp3"
+  },
+  {
+    "key": 31,
+    "title": "Migrating Sparrows",
+    "audio": "assets/audio/31.mp3",
+    "image": "assets/images/31.jpg",
+    "altAudio": "assets/audio-alt/31.mp3"
+  },
+  {
+    "key": 32,
+    "title": "Queens County Farm",
+    "audio": "assets/audio/32.mp3",
+    "image": "assets/images/32.jpg",
+    "altAudio": "assets/audio-alt/32.mp3"
+  },
+  {
+    "key": 33,
+    "title": "Queens Night Market",
+    "audio": "assets/audio/33.mp3",
+    "image": "assets/images/33.jpg",
+    "altAudio": "assets/audio-alt/33.mp3"
+  },
+  {
+    "key": 34,
+    "title": "US Open",
+    "audio": "assets/audio/34.mp3",
+    "image": "assets/images/34.jpg",
+    "altAudio": "assets/audio-alt/34.mp3"
+  },
+  {
+    "key": 35,
+    "title": "Tangang Gatcha Arcade",
+    "audio": "assets/audio/35.mp3",
+    "image": "assets/images/35.jpg",
+    "altAudio": "assets/audio-alt/35.mp3"
+  },
+  {
+    "key": 36,
+    "title": "Basement Luthier",
+    "audio": "assets/audio/36.mp3",
+    "image": "assets/images/36.jpg",
+    "altAudio": "assets/audio-alt/36.mp3"
+  },
+  {
+    "key": 37,
+    "title": "Sri Chinmoy Ultra Marathon",
+    "audio": "assets/audio/37.mp3",
+    "image": "assets/images/37.jpg",
+    "altAudio": "assets/audio-alt/37.mp3"
+  },
+  {
+    "key": 38,
+    "title": "LaGuardia Community College Swimming",
+    "audio": "assets/audio/38.mp3",
+    "image": "assets/images/38.jpg",
+    "altAudio": "assets/audio-alt/38.mp3"
+  },
+  {
+    "key": 39,
+    "title": "BLM Protests",
+    "audio": "assets/audio/39.mp3",
+    "image": "assets/images/39.jpg",
+    "altAudio": "assets/audio-alt/39.mp3"
+  },
+  {
+    "key": 40,
+    "title": "Sohmer Piano Middle C",
+    "audio": "assets/audio/40.mp3",
+    "image": "assets/images/40.jpg",
+    "altAudio": "assets/audio-alt/40.mp3"
+  },
+  {
+    "key": 41,
+    "title": "Essential Worker Celebrations",
+    "audio": "assets/audio/41.mp3",
+    "image": "assets/images/41.jpg",
+    "altAudio": "assets/audio-alt/41.mp3"
+  },
+  {
+    "key": 42,
+    "title": "Ratha Yatra",
+    "audio": "assets/audio/42.mp3",
+    "image": "assets/images/42.jpg",
+    "altAudio": "assets/audio-alt/42.mp3"
+  },
+  {
+    "key": 43,
+    "title": "QPL Drag Story Hour",
+    "audio": "assets/audio/43.mp3",
+    "image": "assets/images/43.jpg",
+    "altAudio": "assets/audio-alt/43.mp3"
+  },
+  {
+    "key": 44,
+    "title": "Forest Park Carousel",
+    "audio": "assets/audio/44.mp3",
+    "image": "assets/images/44.jpg",
+    "altAudio": "assets/audio-alt/44.mp3"
+  },
+  {
+    "key": 45,
+    "title": "Flushing Street Singer",
+    "audio": "assets/audio/45.mp3",
+    "image": "assets/images/45.jpg",
+    "altAudio": "assets/audio-alt/45.mp3"
+  },
+  {
+    "key": 46,
+    "title": "Brunch",
+    "audio": "assets/audio/46.mp3",
+    "image": "assets/images/46.jpg",
+    "altAudio": "assets/audio-alt/46.mp3"
+  },
+  {
+    "key": 47,
+    "title": "Songkran",
+    "audio": "assets/audio/47.mp3",
+    "image": "assets/images/47.jpg",
+    "altAudio": "assets/audio-alt/47.mp3"
+  },
+  {
+    "key": 48,
+    "title": "Can Machine",
+    "audio": "assets/audio/48.mp3",
+    "image": "assets/images/48.jpg",
+    "altAudio": "assets/audio-alt/48.mp3"
+  },
+  {
+    "key": 49,
+    "title": "Pigeon Paradise",
+    "audio": "assets/audio/49.mp3",
+    "image": "assets/images/49.jpg",
+    "altAudio": "assets/audio-alt/49.mp3"
+  },
+  {
+    "key": 50,
+    "title": "The Elevated Train",
+    "audio": "assets/audio/50.mp3",
+    "image": "assets/images/50.jpg",
+    "altAudio": "assets/audio-alt/50.mp3"
+  },
+  {
+    "key": 51,
+    "title": "Mets Game",
+    "audio": "assets/audio/51.mp3",
+    "image": "assets/images/51.jpg",
+    "altAudio": "assets/audio-alt/51.mp3"
+  },
+  {
+    "key": 52,
+    "title": "Gurdwara Sahib",
+    "audio": "assets/audio/52.mp3",
+    "image": "assets/images/52.jpg",
+    "altAudio": "assets/audio-alt/52.mp3"
+  },
+  {
+    "key": 53,
+    "title": "Louis Armstrong Museum",
+    "audio": "assets/audio/53.mp3",
+    "image": "assets/images/53.jpg",
+    "altAudio": "assets/audio-alt/53.mp3"
+  },
+  {
+    "key": 54,
+    "title": "Tassa Drums",
+    "audio": "assets/audio/54.mp3",
+    "image": "assets/images/54.jpg",
+    "altAudio": "assets/audio-alt/54.mp3"
+  },
+  {
+    "key": 55,
+    "title": "Snooker",
+    "audio": "assets/audio/55.mp3",
+    "image": "assets/images/55.jpg",
+    "altAudio": "assets/audio-alt/55.mp3"
+  },
+  {
+    "key": 56,
+    "title": "Vintage Kaufman Astoria Films",
+    "audio": "assets/audio/56.mp3",
+    "image": "assets/images/56.jpg",
+    "altAudio": "assets/audio-alt/56.mp3"
+  },
+  {
+    "key": 57,
+    "title": "Tabernacle of Prayer",
+    "audio": "assets/audio/57.mp3",
+    "image": "assets/images/57.jpg",
+    "altAudio": "assets/audio-alt/57.mp3"
+  },
+  {
+    "key": 58,
+    "title": "The BQE",
+    "audio": "assets/audio/58.mp3",
+    "image": "assets/images/58.jpg",
+    "altAudio": "assets/audio-alt/58.mp3"
+  },
+  {
+    "key": 59,
+    "title": "Dog Barking at Fireworks",
+    "audio": "assets/audio/59.mp3",
+    "image": "assets/images/59.jpg",
+    "altAudio": "assets/audio-alt/59.mp3"
+  },
+  {
+    "key": 60,
+    "title": "Colombian Day Parade",
+    "audio": "assets/audio/60.mp3",
+    "image": "assets/images/60.jpg",
+    "altAudio": "assets/audio-alt/60.mp3"
+  },
+  {
+    "key": 61,
+    "title": "Queensbound Poets",
+    "audio": "assets/audio/61.mp3",
+    "image": "assets/images/61.jpg",
+    "altAudio": "assets/audio-alt/61.mp3"
+  },
+  {
+    "key": 62,
+    "title": "Resorts World Casino",
+    "audio": "assets/audio/62.mp3",
+    "image": "assets/images/62.jpg",
+    "altAudio": "assets/audio-alt/62.mp3"
+  },
+  {
+    "key": 63,
+    "title": "Speaker in Bag on Street",
+    "audio": "assets/audio/63.mp3",
+    "image": "assets/images/63.jpg",
+    "altAudio": "assets/audio-alt/63.mp3"
+  },
+  {
+    "key": 64,
+    "title": "Kissena Velodrome",
+    "audio": "assets/audio/64.mp3",
+    "image": "assets/images/64.jpg",
+    "altAudio": "assets/audio-alt/64.mp3"
+  },
+  {
+    "key": 65,
+    "title": "Astoria Park Pool",
+    "audio": "assets/audio/65.mp3",
+    "image": "assets/images/65.jpg",
+    "altAudio": "assets/audio-alt/65.mp3"
+  },
+  {
+    "key": 66,
+    "title": "Dharma House",
+    "audio": "assets/audio/66.mp3",
+    "image": "assets/images/66.jpg",
+    "altAudio": "assets/audio-alt/66.mp3"
+  },
+  {
+    "key": 67,
+    "title": "QPL Language Classes",
+    "audio": "assets/audio/67.mp3",
+    "image": "assets/images/67.jpg",
+    "altAudio": "assets/audio-alt/67.mp3"
+  },
+  {
+    "key": 68,
+    "title": "We Shall Overcome",
+    "audio": "assets/audio/68.mp3",
+    "image": "assets/images/68.jpg",
+    "altAudio": "assets/audio-alt/68.mp3"
+  },
+  {
+    "key": 69,
+    "title": "Sounds of Cyprus",
+    "audio": "assets/audio/69.mp3",
+    "image": "assets/images/69.jpg",
+    "altAudio": "assets/audio-alt/69.mp3"
+  },
+  {
+    "key": 70,
+    "title": "Saw Lady",
+    "audio": "assets/audio/70.mp3",
+    "image": "assets/images/70.jpg",
+    "altAudio": "assets/audio-alt/70.mp3"
+  },
+  {
+    "key": 71,
+    "title": "Iron Triangle",
+    "audio": "assets/audio/71.mp3",
+    "image": "assets/images/71.jpg",
+    "altAudio": "assets/audio-alt/71.mp3"
+  },
+  {
+    "key": 72,
+    "title": "Elmhurst Hospital Ambulances",
+    "audio": "assets/audio/72.mp3",
+    "image": "assets/images/72.jpg",
+    "altAudio": "assets/audio-alt/72.mp3"
+  },
+  {
+    "key": 73,
+    "title": "Aqueduct Racetrack",
+    "audio": "assets/audio/73.mp3",
+    "image": "assets/images/73.jpg",
+    "altAudio": "assets/audio-alt/73.mp3"
+  },
+  {
+    "key": 74,
+    "title": "Q.E.D. Comedy Show",
+    "audio": "assets/audio/74.mp3",
+    "image": "assets/images/74.jpg",
+    "altAudio": "assets/audio-alt/74.mp3"
+  },
+  {
+    "key": 75,
+    "title": "Steinway Zohran Watch Party",
+    "audio": "assets/audio/75.mp3",
+    "image": "assets/images/75.jpg",
+    "altAudio": "assets/audio-alt/75.mp3"
+  },
+  {
+    "key": 76,
+    "title": "Lemon Ice King of Corona / Woodside Fall Fest",
+    "audio": "assets/audio/76.mp3",
+    "image": "assets/images/76.jpg",
+    "altAudio": "assets/audio-alt/76.mp3"
+  },
+  {
+    "key": 77,
+    "title": "N.Y.C. Marathon",
+    "audio": "assets/audio/77.mp3",
+    "image": "assets/images/77.jpg",
+    "altAudio": "assets/audio-alt/77.mp3"
+  },
+  {
+    "key": 78,
+    "title": "Welding / Barbershop",
+    "audio": "assets/audio/78.mp3",
+    "image": "assets/images/78.jpg",
+    "altAudio": "assets/audio-alt/78.mp3"
+  },
+  {
+    "key": 79,
+    "title": "Handbell Players",
+    "audio": "assets/audio/79.mp3",
+    "image": "assets/images/79.jpg",
+    "altAudio": "assets/audio-alt/79.mp3"
+  },
+  {
+    "key": 80,
+    "title": "Rockaway Beach Seagull",
+    "audio": "assets/audio/80.mp3",
+    "image": "assets/images/80.jpg",
+    "altAudio": "assets/audio-alt/80.mp3"
+  },
+  {
+    "key": 81,
+    "title": "Poseidon Festival",
+    "audio": "assets/audio/81.mp3",
+    "image": "assets/images/81.jpg",
+    "altAudio": "assets/audio-alt/81.mp3"
+  },
+  {
+    "key": 82,
+    "title": "Queens College Commencement",
+    "audio": "assets/audio/82.mp3",
+    "image": "assets/images/82.jpg",
+    "altAudio": "assets/audio-alt/82.mp3"
+  },
+  {
+    "key": 83,
+    "title": "Rain on Houdini’s Grave",
+    "audio": "assets/audio/83.mp3",
+    "image": "assets/images/83.jpg",
+    "altAudio": "assets/audio-alt/83.mp3"
+  },
+  {
+    "key": 84,
+    "title": "Queens Zoo Aviary",
+    "audio": "assets/audio/84.mp3",
+    "image": "assets/images/84.jpg",
+    "altAudio": "assets/audio-alt/84.mp3"
+  },
+  {
+    "key": 85,
+    "title": "Handball",
+    "audio": "assets/audio/85.mp3",
+    "image": "assets/images/85.jpg",
+    "altAudio": "assets/audio-alt/85.mp3"
+  },
+  {
+    "key": 86,
+    "title": "Paradise Aquarium",
+    "audio": "assets/audio/86.mp3",
+    "image": "assets/images/86.jpg",
+    "altAudio": "assets/audio-alt/86.mp3"
+  },
+  {
+    "key": 87,
+    "title": "Earth Angel Crystal Chimes",
+    "audio": "assets/audio/87.mp3",
+    "image": "assets/images/87.jpg",
+    "altAudio": "assets/audio-alt/87.mp3"
+  },
+  {
+    "key": 88,
+    "title": "Astoria Park Beach Glass",
+    "audio": "assets/audio/88.mp3",
+    "image": "assets/images/88.jpg",
+    "altAudio": "assets/audio-alt/88.mp3"
+  }
+]

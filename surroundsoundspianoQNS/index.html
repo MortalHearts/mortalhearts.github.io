@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Surround Sounds Piano_QNS — an instrument made from sounds collected throughout Queens.">
+  <title>Surround Sounds Piano_QNS — Mortal Hearts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <a class="about-link" href="about.html">ABOUT</a>
+    <a class="home-star" href="https://mortalhearts.com" aria-label="Visit Mortal Hearts" title="Mortal Hearts">
+      <img src="assets/logos/header-logo.png" alt="Mortal Hearts logo">
+    </a>
+
+    <section class="image-stage" id="image-stage" aria-label="Image associated with the selected sound" hidden>
+      <img id="sound-image" alt="">
+    </section>
+
+    <section class="keyboard-section" aria-label="Interactive 88-key piano">
+      <div class="keyboard-scroll">
+        <svg id="keyboard" role="group" aria-label="88 numbered piano keys"></svg>
+      </div>
+      <div class="keyboard-controls">
+        <button id="alt-toggle" class="alt-toggle" type="button" aria-pressed="false">ALT SOUND</button>
+      </div>
+    </section>
+
+    <div class="sound-title" id="sound-title" aria-live="polite" hidden></div>
+    <audio id="audio-player" preload="none"></audio>
+
+    <footer class="site-footer">
+      <div>Surround Sounds Piano_QNS<br>MORTAL HEARTS</div>
+    </footer>
+  </main>
+  <script src="piano.js"></script>
+</body>
+</html>
